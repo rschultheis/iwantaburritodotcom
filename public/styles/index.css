@@ -1,11 +1,18 @@
 @keyframes falling-burrito {
-  from {top: 40; left: 20; transform: none;}
-  to {top: 200; left: 150; transform: rotate(90deg);}
+  0% {transform: none; height: 300px; opacity: 0;}
+  50% {opacity: 1}
+  100% {transform: rotate(90deg);  height: 700px;}
 }
 
 body {
   background-color: #f7f7f7; 
   color: #1c1c1c;
+  font-family: 'Montserrat', sans-serif;
+}
+
+strong {
+  color: #347c15;
+  font-size: larger
 }
 
 .margin {
@@ -14,33 +21,52 @@ body {
 }
 
 .hero {
-  color:  #4286f4;
-  font-weight: 600;
   height: 130px;
+  padding-bottom: 24px;
 }
 
 .hero-text {
+  color:  #4286f4;
+  position: relative;
   font-size: 3.0em;
   padding-top: 38px;
   text-transform: uppercase;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero-text:after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  border-width: 0 0 5px;
+  border-style: solid;
+  border-color: red;
+}
+
+.cta {
+  padding-bottom: 20px;
 }
 
 img.flying-burrito {
-  position: absolute;
-  height: 600px;
-  left: 150;
-  top: 200;
   transform: rotate(90deg);
   z-index: -1;
   animation-name: falling-burrito;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-timing-function: ease-in;
+  margin-top: -60px;
+  height: 700px;
+  transition: height 100ms;
+  transition: transform 100ms;
 }
 
 .order-btn {
   background-color: #cc7e02;
   margin: 0 auto;
-  padding: 7px;
+  padding: 5px;
   width: 180px;
   cursor: pointer;
   text-transform: uppercase;
@@ -52,7 +78,20 @@ img.flying-burrito {
   background-color: #4286f4;
 }
 
+.order-btn:hover {
+  background-color: #4286f4;
+}
+
 .order-btn .btn-text {
-  color: #f7f7f7;
-  font-size: 1.6em;
+  color: black;
+  font-size: 1.9em;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+.order-btn:hover > .btn-text {
+  color: white;
+}
+
+.order-btn:hover + img.flying-burrito {
+  transform: rotate(85deg);
 }
