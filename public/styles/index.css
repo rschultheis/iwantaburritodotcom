@@ -20,16 +20,12 @@ strong {
   text-align: center;
 }
 
-.hero {
-  height: 130px;
-  padding-bottom: 24px;
-}
 
 .hero-text {
   color:  #4286f4;
   position: relative;
   font-size: 3.0em;
-  padding-top: 38px;
+  padding-top: 50px;
   text-transform: uppercase;
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   max-width: 500px;
@@ -41,14 +37,16 @@ strong {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -13px;
   border-width: 0 0 5px;
   border-style: solid;
   border-color: red;
 }
 
 .cta {
-  padding-bottom: 20px;
+  padding-bottom: 50px;
+  font-size: 1.4em;
+  line-height: 26px;
 }
 
 img.flying-burrito {
@@ -57,7 +55,7 @@ img.flying-burrito {
   animation-name: falling-burrito;
   animation-duration: 2s;
   animation-timing-function: ease-in;
-  margin-top: -60px;
+  margin-top: -90px;
   height: 700px;
   transition: height 100ms;
   transition: transform 100ms;
@@ -94,4 +92,41 @@ img.flying-burrito {
 
 .order-btn:hover + img.flying-burrito {
   transform: rotate(85deg);
+}
+
+@media only screen and  (max-width: 768px) {
+  
+  .cta {
+    padding-bottom: 30px;
+    font-size: 1.4em;
+    line-height: 26px;
+  }
+
+  img.flying-burrito {
+    transform: none;
+    animation-name: none;
+    height: 450px;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  .order-btn:hover + img.flying-burrito {
+    transform: none;
+  }
+}
+
+@media only screen and  (max-width: 575px) {
+  
+  .hero-text {
+    font-size: 2.4em;
+    padding-top: 30px;
+  }
+
+  .cta {
+    font-size: 1.2em;
+  }
+  
+  img.flying-burrito {
+    height: 300px;
+  }
 }
