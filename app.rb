@@ -1,5 +1,5 @@
 require "sinatra"
 
-get "/burrito_me" do
+get "/" do
   erb :burrito_me, layout: true
 end
