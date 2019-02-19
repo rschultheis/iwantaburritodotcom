@@ -1,3 +1,8 @@
+@keyframes falling-burrito {
+  from {top: 40; left: 20; transform: none;}
+  to {top: 200; left: 150; transform: rotate(90deg);}
+}
+
 body {
   background-color: #f7f7f7; 
   color: #1c1c1c;
@@ -10,6 +15,7 @@ body {
 
 .hero {
   color:  #4286f4;
+  font-weight: 600;
   height: 130px;
 }
 
@@ -20,7 +26,15 @@ body {
 }
 
 img.flying-burrito {
-  padding: 60px 0;
+  position: absolute;
+  height: 600px;
+  left: 150;
+  top: 200;
+  transform: rotate(90deg);
+  z-index: -1;
+  animation-name: falling-burrito;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
 }
 
 .order-btn {
