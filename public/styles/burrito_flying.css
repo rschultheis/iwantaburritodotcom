@@ -1,0 +1,126 @@
+@keyframes rWing {
+  0% {
+    transform: rotate(-95deg);
+    top: -82px;
+    left: -262px; 262
+  }
+  10% {
+    transform: rotate(-65deg);
+    top: -62px;
+    left: -202px;
+  }
+  20% {
+    transform: rotate(-95deg);
+    top: -82px;
+    left: -162px;
+  }
+  30% {
+    transform: rotate(-65deg);
+    top: -62px;
+    left: -122px;
+  }
+  40% {
+    transform: rotate(-95deg);
+    top: -82px;
+    left: -82px;
+  }
+  50% {
+    transform: rotate(-45deg);
+    top: -62px;
+    left: -2px;
+  }
+  100% {
+    transform: rotate(-105deg);
+    top: -82px;
+    left: 338px;
+  }
+}
+@keyframes lWing {
+  0% {
+    transform: rotate(-95deg);
+    top: -100px;
+    left: 185px;
+  }
+  10% {
+    transform: rotate(-65deg);
+    top: -80px;
+    left: 245px;
+  }
+  20% {
+    transform: rotate(-95deg);
+    top: -100px;
+    left: 305px;
+  }
+  30% {
+    transform: rotate(-65deg);
+    top: -80px;
+    left: 365px;
+  }
+  40% {
+    transform: rotate(-95deg);
+    top: -100px;
+    left: 425px;
+  }
+  50% {
+    transform: rotate(-45deg);
+    top: -80px;
+    left: 465px;
+  }
+  100% {
+    transform: rotate(-105deg);
+    top: -100px;
+    left: 880px;
+  }
+}
+
+@keyframes fly {
+  0% {
+    top: 70px;
+    left: 20px;
+  }
+  10% {
+    top: 90px;
+    left: 80px;
+  }
+  20% {
+    top: 70px;
+    left: 120px;
+  }
+  30% {
+    top: 90px;
+    left: 160px;
+  }
+  40% {
+    top: 70px;
+    left: 200px;
+  }
+  50% {
+    top: 90px;
+    left: 280px;
+  }
+  100% {
+    top: 70px;
+    left: 620px;
+  }
+}
+
+.rightWing {
+  position: relative;
+  transform-origin: bottom right;
+  animation: rWing 5s ease-in-out infinite;
+}
+
+.leftWing {
+  animation: lWing 5s ease-in-out infinite;
+  transform-origin: bottom right;
+  position: relative;
+  z-index: -2;
+}
+
+.burrito {
+  position: relative;
+  top: 70px;
+  left: 20px;
+  animation: fly 5s ease-in-out infinite;
+  z-index: -1;
+}
