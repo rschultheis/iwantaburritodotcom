@@ -1,13 +1,10 @@
 # iwantaburritodotcom
+An app for connecting burrito-wanters with burritos
 
-This app is built with sinatra
+## Getting started
 
-## After Clone
+This app is built with sinatra, for the moment.  That will change at some point.
 
-You may need to run `bundle install`
-
-You may also need to update with: `gem install bundler`
-
-## Start the server
-
-Run: `ruby app.rb`
+-Install packages `gem install bundle` and the  `bundle install`<br/>
+-Build and run the project `ruby app.rb`<br/>
+-http://localhost:4567/ should load and run

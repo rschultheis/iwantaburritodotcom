@@ -1,17 +1,19 @@
 
 <div class="page-content">
-  <img class="flying-burrito" src="imgs/burrito.jpg" height="250px"/>
   <div class="burrito-me">
-    <h3 class="cta">Get A burrito delivered to you right now</h3>
-    <a href="/flyover">Flyover</a>
+    <h3 class="cta">Get a <strong>burrito</strong> delivered to you right now.</h3>
     <div class="order-btn" id="order">
       <p class="btn-text">Order Now</p>
     </div>
+    <img class="flying-burrito" src="imgs/burrito_blank.png" />
   </div>
 </div>
 
+<a href="/flyover">Flyover</a>
+
+
 <script type="text/javascript">
   document.getElementById('order').onclick = function () {
-    alert('Sorry, there are no actual burritos.');
-    };
+    location.replace('/burrito-coming')
+  };
 </script>
