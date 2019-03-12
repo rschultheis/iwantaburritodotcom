@@ -1,0 +1,31 @@
+
+<html lang="en" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+      <title>I Want A Burrito Dot Com</title>
+      <link rel="stylesheet" href="public/styles/index.css">
+      <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+  </head>
+  <body>
+      <div class="margin">
+          <div class="hero">
+              <h1 class="hero-text">I Want a Burrito Dot Com</h1>
+          </div>
+          <div class="page-content">
+    <div class="burrito-me">
+      <h3 class="cta">Congratulations! Your <strong>burrito</strong> is on its way.</h3>
+    </div>
+    <div class="order-btn another" id="order-another">
+      <p class="btn-text">Order Another Burrito</p>
+    </div>
+    <img class="burrito-coming" src="public/imgs/burrito_blank.png" />
+  </div>
+
+  <script type="text/javascript">
+    document.getElementById('order-another').onclick = function () {
+      location.replace('index.html')
+    };
+  </script>
+      </div>
+  </body>
