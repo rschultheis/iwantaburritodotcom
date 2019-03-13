@@ -1,0 +1,68 @@
+<html lang="en" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+      <title>I Want A Burrito Dot Com</title>
+      <link rel="stylesheet" href="public/styles/index.css">
+      <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script type="text/javascript">
+        function postToGoogle() {
+          var field1 = $('#name').val();
+          var field2 = $('#street').val();
+          var field3 = $('#unit').val();
+          var field4 = $('#type').val();
+          var field5 = $('#notes').val();
+
+          $.ajax({
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSegApOArSuOdKS1ZD4GYpm2FkXDAXgAqb-MUb7HhiGfe8sI8w/formResponse",
+            data: {
+              "entry.1784648524": field1,
+              "entry.959386130": field2,
+              "entry.1469485839": field3,
+              "entry.1337728860": field4,
+              "entry.1079075959": field5
+            },
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+              0: function() {
+                //Success message
+                alert("Success!");
+              },
+              200: function() {
+                //Success Message
+                alert("Success!");
+              }
+            }
+          });
+        }
+      </script>
+  </head>
+  <body>
+    <fieldset>
+      <form id="form" target="_self" onsubmit="" action="javascript: postToGoogle()">
+        <fieldset>
+          <legend>Name</legend>
+          <textarea id="name" name="name"></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Street Address (enter only street number and street name)</legend>
+          <textarea id="street" name="street"></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Unit Number, Suite Number, Etc (optional)</legend>
+          <textarea id="unit" name="unit"></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Address Type (residential or business)</legend>
+          <textarea id="type" name="type"></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Notes for Driver (optional)</legend>
+          <textarea id="notes" name="notes"></textarea>
+        </fieldset>
+        <button type="submit">Burrito Me</button>
+      </form>
+    </fieldset>
+  </body>
